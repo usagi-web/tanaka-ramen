@@ -1,0 +1,132 @@
+@charset "utf-8";
+
+.margin-top {
+    margin-top: 80px;
+}
+
+/* メインビジュアル */
+.mv {
+    background-image: url(../images/recruit-mv.jpg);
+    background-image: image-set(url(../images/recruit-mv.jpg) 1x url(../images/recruit-mv@2x.jpg) 2x);
+    background-image: -webkit-image-set(url(../images/recruit-mv.jpg) 1x url(../images/recruit-mv@2x.jpg) 2x);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 320px;
+    width: 100%;
+    position: relative;
+}
+.mv-text {
+    font-size: 56px;
+    font-weight: bold;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* インナー */
+.inner {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+/* 会社紹介 */
+.title {
+    font-size: 56px;
+    font-weight: bold;
+    text-align: center;
+}
+.catch {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    padding: 40px 0;
+}
+.desc {
+    padding-bottom: 40px;
+}
+
+/* 福利厚生 */
+.benefits h2 {
+    padding-bottom: 24px;
+}
+.flex {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    padding: 56px 0;
+    border-bottom: 1px solid #000;
+}
+.text {
+    font-weight: bold;
+}
+h3 {
+    font-size: 24px;
+    padding-bottom: 16px;
+}
+
+/* よくある質問 */
+.question h2 {
+    padding-bottom: 80px;
+}
+.question-flex {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+.question-flex p {
+    font-size: 24px;
+}
+.answer {
+    width: 100%;
+    height: 140px;
+    background: #F1F1F1;
+    margin-top: 16px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+/* タブレット以下 */
+@media (max-width: 800px){
+    .margin-top {
+        margin-top: 40px;
+    }
+    .mv {
+        background-image: url(../images/recruit-mv-sp.jpg);
+        background-image: image-set(url(../images/recruit-mv-sp.jpg) 1x url(../images/recruit-mv-sp@2x.jpg) 2x);
+        background-image: -webkit-image-set(url(../images/recruit-mv-sp.jpg) 1x url(../images/recruit-mv-sp@2x.jpg) 2x);
+    }
+    .mv-text {
+        font-size: 32px;
+    }
+    /* インナー */
+    .inner {
+        max-width: 760px;
+        padding: 0 2.5%;
+    }
+    .title {
+        font-size: 32px;
+    }
+    .catch {
+        font-size: 24px;
+    }
+    /* 福利厚生 */
+    .benefits h2 {
+        padding-bottom: 0;
+    }
+    .flex {
+        flex-direction: column;
+        padding: 40px 0;
+    }
+    .benefits-text {
+        text-align: center;
+    }
+
+    /* よくある質問 */
+    .question h2 {
+        padding-bottom: 40px;
+    }
+    .answer {
+        margin-top: 0;
+    }
+}

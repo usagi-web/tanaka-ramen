@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ラーメン田中</title>
+    <link rel="stylesheet" href="../CSS/reset.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="../CSS/common.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="../CSS/contact.css" type="text/css" media="screen">
+</head>
+
+<body id="body">
+    <div class="wrap">
+    <!--ヘッダー-->
+    <header class=header id="header">
+        <div class="header-inner">
+            <!-- ヘッダーロゴ -->
+            <h1 class="head-logo"><a href="../index.html"><img src="../images/ramen_pc_LOGO.svg" alt="ラーメン田中"></a></h1>
+            <!-- ナビゲーション -->
+            <nav class="header-nav">
+                <ul class="nav-list">
+                    <li><a href="../menu/menu.html">メニュー</a></li>
+                    <li><a href="../kodawari/kodawari.html">こだわり</a></li>
+                    <li><a href="../recruit/recruit.html">採用情報</a></li>
+                    <li><a href="contact/contact.html">お問い合わせ</a></li>
+                </ul>
+                <!-- ハンバーガーボタン -->
+                <div class="hamburger">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    
+
+    <!-- メインビジュアル -->
+    <div class="mv">
+        <h2 class="mv-text">お問い合わせ</h2>
+    </div>
+
+    <!-- インナー -->
+    <div class="inner">
+
+        <div class="contact">
+            <div class="contact-text">
+                <h2 class="title text-bold">お客様のご意見・ご要望など</h2>
+                <p class="sub-title text-bold">下記フォームにご記入ください。</p>
+                <p class="text-bold"><span class="color">*</span>は必須項目です</p>
+            </div>
+
+            <!-- お問い合わせフォーム -->
+            <form action="" method="post">
+                <div class="item">
+                    <label class="label text-bold" for="name">お名前<span class="color">*</span></label>
+                    <input type="text" class="inputs" name="name" id="name" placeholder="例: 山田太郎" required>
+                </div>
+
+                <div class="item">
+                    <label class="label text-bold" for="email">メールアドレス<span class="color">*</span></label>
+                    <input type="email" class="inputs" name="email" id="email" placeholder="例: sample@gift-group.co.jp" required>
+                </div>
+
+                <div class="item">
+                    <label class="label text-bold" for="tel">電話番号</label>
+                    <input type="tel" class="inputs" name="tel" id="tel" placeholder="例: 0427057555">
+                </div>
+                <!-- お問い合わせ区分 -->
+                <div class="item">
+                    <label class="label text-bold" for="select">お問い合わせ区分<span class="color">*</span></label>
+                    <div class="select-box">
+                        <select name="" id="select">
+                            <option value="商品に関するお問い合わせ">商品に関するお問い合わせ</option>
+                            <option value="サービスに関するお問い合わせ">サービスに関するお問い合わせ</option>
+                            <option value="採用に関するお問い合わせ">採用に関するお問い合わせ</option>
+                        </select>
+                    </div>
+                </div>
+                <!-- お問い合わせ詳細 -->
+                <div class="item">
+                    <label class="label text-bold" for="textarea">お問い合わせ詳細<span class="color">*</span></label>
+                    <textarea class="textarea" id="textarea"></textarea>
+                </div>
+                <!-- 返信の有無 -->
+                <div class="item-radio">
+                    <p class="label text-bold">返信の有無</p>
+                    <div class="radio-group">
+                        <div class="inputs-radio">
+                            <input type="radio" name="reply" id="radio" value="返信を希望する">
+                            <label class="label text-bold" for="radio">返信を希望する</label>
+                        </div>
+                        
+                        <div class="inputs-radio">
+                            <input type="radio" name="reply" id="radio" value="返信を希望しない">
+                            <label class="label text-bold" for="radio">返信を希望しない</label>
+                        </div>
+                    </div>
+                </div>
+                <!-- 注意書き -->
+                <div class="form-item">
+                    <p class="form-item-text">※お客さまがお使いのメールサービスや携帯電話の迷惑メール対策の設定により、ご回答メールが届かない場合がございます。あらかじめ設定をご確認の上ご送付をお願いいたします。
+                        <br>
+                        ※ 匿名もしくは正確な情報が入力なされていない場合、返信は出来かねます。
+                        <br>
+                        ※ 返信までに数日いただく場合や、お答えできない場合がございますので、あらかじめご了承ください。
+                    </p>
+                </div>
+                <!-- 送信ボタン -->
+                <div class="btn-area">
+                    <button>送信する</button>
+                </div>
+                
+            </form>
+        </div>
+    </div>
+   
+    <!-- フッター -->
+     <footer class="footer">
+        <div class="inner">
+            <div class="footer-info">
+                <!-- フッターのSNSエリア -->
+                <div class="info-social">
+                    <div class="footer-logo">
+                        <a href="index.html"><img src="../images/ramen_footer_logo.svg" alt="ラーメン田中"></a>
+                    </div>
+                    <ul class="btn-sns">
+                        <li>
+                            <a href="https://www.facebook.com/” target=”_blank”" class="social-icon">
+                                <i class="fa-brands fa-facebook"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/” target=”_blank" class="social-icon">
+                                <i class="fa-brands fa-square-x-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/” target=”_blank" class="social-icon">
+                                <i class="fa-brands fa-square-instagram"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- フッターの店舗情報エリア -->
+                <div class="p-info">
+                    <p>店舗情報
+                        <br>
+                        〒000-0000 ○○市○○町○○番地
+                        <br>
+                        電話番号 ○○-○○○○-○○○○
+                    </p>
+                </div>
+            </div>
+            <!-- コピーライト -->
+            <p class="Copyright">
+                <small>©田中ラーメン. All rights reserved.</small>
+            </p>
+            <!-- トップページに戻るボタン -->
+            <div class="gotop">
+                <a href="#body"></a>
+            </div>
+        </div>
+     </footer>
+     
+    </div>
+
+     <!-- font-awesome -->
+     <script src="https://kit.fontawesome.com/b41b29b4ba.js" crossorigin="anonymous"></script>
+
+     <!-- JQuery -->
+     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+     <script>
+        $(function() {
+            // ハンバーガー
+            $('.hamburger').on('click',function(){
+                if($(this).hasClass('active')){
+                    $(this).removeClass('active')
+                } else{
+                    $(this).addClass('active');
+                }
+            });
+
+            $('.hamburger').click(function(){
+                $('.hamburger').toggleClass('.active');
+                $('.nav-list').slideToggle();
+            })
+
+            // トップページに戻るボタン
+            $('.gotop').hide();
+
+            $(window).scroll(function() {
+                if ($(this).scrollTop() > 300) {
+                    $('.gotop').fadeIn();
+                } else {
+                    $('.gotop').fadeOut();
+                }
+            })
+
+            $('.gotop').click(function() {
+                $('body,html').animate({
+                    scrollTop: 0
+                }, 500)
+            })
+        });
+     </script>
+
+</body>
+
+</html>

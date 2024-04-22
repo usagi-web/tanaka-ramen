@@ -1,0 +1,224 @@
+@charset "utf-8";
+
+/* トップページ共通 */
+.section {
+    margin-top: 80px;
+}
+.inner {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* ボタン */
+.btn {
+    display: inline-block;
+    padding: 16px 40px;
+    background-color: #E83318;
+    position: relative;
+    color: #FFFFFF;
+    border: 1px solid #E83318;
+    width: 192px;
+    height: 56px;
+    text-align: center;
+    white-space: nowrap;
+    font-weight: bold;
+}
+.btn::after {
+    content: '\f105';
+    font: var(--fa-font-solid);
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+}
+.btn:hover {
+    background: #FFFFFF;
+    color: #E83318;
+}
+
+/* メインビジュアル */
+.mainvisual {
+    background-image: url(../images/MV-img.jpg);
+    background-image: image-set(url(../images/MV-img.jpg) 1x url(../images/MV-img@2x.jpg) 2x);
+    background-image: -webkit-image-set(url(../images/MV-img.jpg) 1x url(../images/MV-img@2x.jpg) 2x);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 580px;
+    width: 100%;
+    position: relative;
+}
+.main-catchphrase {
+    position: absolute;
+    right: 10%;
+    top:0;
+    bottom: 0;
+    margin: auto;
+    height: 560px;
+}
+
+/* 最新情報 */
+.news-title {
+    text-align: center;
+    font-size: 32px;
+}
+.news-list {
+    padding-top: 24px;
+}
+.news-list h3 {
+    padding-bottom: 16px;
+}
+.flex-list {
+    display: flex;
+    padding: 16px 0;
+    border-bottom: 1px dashed #222222;
+}
+.flex-list:first-child {
+    border-top: 1px dashed #222222;
+}
+.flex-list dt {
+    padding-right: 58px;
+    font-weight: normal;
+}
+
+/* 採用情報とこだわり */
+.section-02 {
+    color: #FFFFFF;
+}
+.section-02 ul {
+    display: flex;
+    width: auto;
+}
+.section-02 li {
+    position: relative;
+    width: 100%;
+}
+.section-02 img {
+    height: 425px;
+    object-fit: cover;
+}
+.section-title {
+    position: absolute;
+    top: 13%;
+    left: 50%;
+    transform: translate(-50%,0);
+    font-size: 56px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+.section-02 .text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+}
+.section-02-btn .btn {
+    position: absolute;
+    bottom: 13%;
+    left: 50%;
+    transform: translate(-50%,0);
+}
+
+/* メニュー */
+.block-upper {
+    display: flex;
+}
+.block-upper_img {
+    width: 50%;
+}
+.block-upper_content {
+    background: #000000;
+    width: 50%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 2%;
+}
+.block-upper-text {
+    color: #FFFFFF;
+}
+.block-lower {
+    display: flex;
+}
+.section-03-btn{
+    padding-top: 64px;
+    text-align: center;
+}
+
+/* タブレット以下 */
+@media (max-width: 800px){
+    .inner {
+        max-width: 760px;
+        padding: 0 2.5%;
+    }
+    .section {
+        margin-top: 40px;
+    }
+    /* メインビジュアル */
+    .mainvisual {
+        background-image: url(../images/MV-img-sp.jpg);
+        background-image: image-set(url(../images/MV-img-sp.jpg) 1x url(../images/MV-img-sp@2x.jpg) 2x);
+        background-image: -webkit-image-set(url(../images/MV-img-sp.jpg) 1x url(../images/MV-img-sp@2x.jpg) 2x);
+        height: 480px;
+    }
+    .main-catchphrase {
+        top: 20%;
+        right: 0;
+    }
+    .main-catchphrase img{
+        height: 460px;
+        
+    }
+/* 採用情報とこだわり */
+    .section-02 img {
+        height: 304px;
+    }
+    .section-title {
+        font-size: 32px;
+    }
+    .section-02 .text {
+        white-space: normal;
+    }
+}
+
+/* スマホ */
+@media (max-width: 400px){
+    .inner {
+        max-width: 380px;
+    }
+    .section {
+        margin-top: 32px;
+    }
+    /* ボタン */
+    .btn {
+        width: 244px;
+    }
+    /* 最新情報 */
+    .news-title {
+        font-size: 24px;
+    }
+    .news-list {
+        padding-top: 8px;
+    }
+    /* 採用情報とこだわり */
+        .section-02 ul {
+            flex-direction: column;
+        }
+    /* メニュー */
+    .block-upper {
+        flex-direction: column;
+    }
+    .block-upper_img {
+        width: 100%;
+    }
+    .block-upper_content {
+        width: 100%;
+        padding: 40px 2%;
+    }
+    .section-03-btn{
+        padding-top: 32px;
+    }
+
+}          

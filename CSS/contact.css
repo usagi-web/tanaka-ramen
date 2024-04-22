@@ -1,0 +1,152 @@
+@charset "utf-8";
+
+.text-bold {
+    font-weight: bold;
+}
+
+/* メインビジュアル */
+.mv {
+    background-image: url(../images/contact-mv.jpg);
+    background-image: image-set(url(../images/contact-mv.jpg) 1x url(../images/contact-mv@2x.jpg) 2x);
+    background-image: -webkit-image-set(url(../images/contact-mv.jpg) 1x url(../images/contact-mv@2x.jpg) 2x);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 320px;
+    width: 100%;
+    position: relative;
+}
+.mv-text {
+    font-size: 56px;
+    font-weight: bold;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* インナー */
+.inner {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-text h2 {
+    font-size: 40px;
+    margin-top: 80px;
+    text-align: center;
+}
+.contact-text p {
+    margin-top: 40px;
+}
+.sub-title {
+    text-align: center;
+}
+
+/* お問い合わせフォーム */
+.item {
+    margin-top: 24px;
+}
+.color {
+    color: #F00;
+}
+.inputs {
+    width: 100%;
+    height: 40px;
+    border: 1px solid #E6E6E6;
+    background: #F8F8F8;
+}
+/* お問い合わせ区分 */
+select {
+    width: 100%;
+    height: 40px;
+    border: 1px solid #E6E6E6;
+    background: #F8F8F8;
+    -moz-appearance: menulist;
+    -webkit-appearance: menulist;
+    appearance: menulist;
+}
+/* お問い合わせ詳細 */
+.textarea {
+    width: 100%;
+    height: 66px;
+    border: 1px solid #E6E6E6;
+    background: #F8F8F8;
+}
+/* 返信の有無 */
+.item-radio {
+    margin-top: 40px;
+}
+.radio-group {
+    display: flex;
+}
+.inputs-radio {
+    margin-left: 16px;
+}
+input[type="radio"] {
+    position: relative;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #000;
+  border-radius: 50%;
+  vertical-align: -2px;
+}
+input[type="radio"]:checked:before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #000;
+    content: '';
+  }
+/* 注意書き */
+.form-item {
+    margin-top: 24px;
+}
+/* 送信ボタン */
+.btn-area {
+    margin-top: 24px;
+    display: flex;
+    justify-content: center;
+}
+button {
+    text-align: center;
+    width: 160px;
+    height: 32px;
+    border-radius: 16px;
+    background:#E83318;
+    color: #fff;
+}
+
+/* タブレット以下 */
+@media (max-width: 800px){
+    /* メインビジュアル */
+    .mv-text {
+        font-size: 32px;
+    }
+    /* インナー */
+    .inner {
+        max-width: 760px;
+        padding: 0 2.5%;
+    }
+    .contact-text h2 {
+        font-size: 32px;
+    }
+}
+
+/* スマホ */
+@media (max-width: 400px){
+    /* インナー */
+    .inner {
+        max-width: 380px;
+    }
+
+    .contact-text h2 {
+        font-size: 24px;
+    }
+}
+

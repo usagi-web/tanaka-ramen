@@ -1,0 +1,244 @@
+@charset "utf-8";
+
+html {
+    font-size: 100%;
+}
+
+body {
+    font-family:"Hiragino Mincho ProN",YuMincho,serif;
+    color: #222;
+    line-height: 1.5;
+    padding-top: 90px;
+}
+
+img {
+    width: 100%;
+    max-width: 100%;
+}
+
+* {
+    box-sizing: border-box;
+  }
+
+  /* ヘッダー */
+.header {
+    background-color: #D1AB74;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+.header-inner {
+    display: flex;
+    height: 90px;
+    align-items: center;
+    padding: 0 5%;
+}
+/* ロゴ */
+.head-logo a{
+    display: block;
+}
+.head-logo a:hover {
+    opacity: 0.7;
+}
+.head-logo img {
+    height: 90px;
+}
+/* ナビゲーション */
+.header-nav {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+.nav-list {
+    display: flex;
+    justify-content: center;
+}
+.nav-list li + li {
+    margin-left: 24px;
+}
+.nav-list a:hover {
+    opacity: 0.7;
+}
+/* ハンバーガーボタン */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    background: transparent;
+}
+.hamburger div {
+    width: 30px;
+    height: 3px;
+    background: #222;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+.hamburger div:first-child {
+    transform: translate(-50%, -10px);
+}
+.hamburger div:nth-child(2) {
+    transform: translate(-50%, -50%);
+}
+.hamburger div:last-child {
+    transform: translate(-50%, 7px);
+}
+/* フッター */
+.footer {
+    margin-top: 80px;
+}
+.footer-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    padding-bottom: 56px;
+}
+/* フッターのSNSエリア */
+.info-social {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 24px;
+    width: 128.8px;
+    height: 121.913px;
+}
+.footer-logo{
+    text-align: center;
+}
+.footer-logo img{
+    height: 69px;
+}
+.footer-logo a:hover {
+    opacity: 0.7;
+}
+.btn-sns {
+    display: flex;
+    justify-content: space-between;
+}
+.social-icon {
+    display: inline-block;
+    font-size: 28px;
+}
+.social-icon:hover {
+    opacity: 0.7;
+}
+/* フッターの店舗情報エリア */
+.p-info p {
+    line-height: 36px;
+}
+/* コピーライト */
+.Copyright{
+padding: 32px 0;
+border-top: 1px solid #222;
+text-align: center;
+}
+/* トップページに戻るボタン */
+.gotop{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+.gotop a {
+    display: block;
+    width: 48px;
+    height: 48px;
+    background: #222;
+    position: relative;
+}
+.gotop a::before{
+    content: '\f106';
+    font: var(--fa-font-solid);
+    position: absolute;
+    color: #fff;
+    font-size: 20px;
+    top: 50%;
+    left: 32%;
+    transform: translateX(-32%);
+    transform: translateY(-50%);
+}
+.gotop a:hover {
+    background: #E83318;
+}
+
+/* メディアクエリ */
+/* タブレット以下 */
+@media (max-width: 800px){
+    .body {
+        overflow-x: hidden;
+    }
+    /* ナビゲーション */
+    .nav-list {
+        position: absolute;
+        right: 0;
+        top: 90px;
+        height: 100vh;
+        background: #fff;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        display: none;
+    }
+    .nav-list li + li {
+        margin-left: 0;
+        margin-top: 56px;
+    }
+    /* ハンバーガーボタン */
+    .hamburger {
+        display: block;
+    }
+    .hamburger div {
+        transition: .4s;
+    }
+    .active div:first-child {
+        transform: translate(-50%, 50%) rotate(45deg);
+    }
+    .active div:nth-child(2) {
+        transform: translate(-50%, 50%);
+        opacity: 0;
+    }
+    .active div:last-child {
+        transform: translate(-50%, 50%) rotate(-45deg);
+    }
+}
+
+/* メディアクエリ */
+/* スマホ */
+@media (max-width: 400px){
+    body {
+        padding-top: 60px;
+    }
+    /* ヘッダー */
+    .header-inner {
+        height: 60px;
+    }
+    .head-logo img{
+        height: 60px;
+    }
+    /* ナビゲーション */
+    .nav-list {
+        top: 60px;
+    }
+
+    /* フッター */
+    .footer {
+        margin-top: 40px;
+    }
+    .footer-info {
+        flex-direction: column;
+    }
+    .p-info {
+        padding-top: 32px;
+    }
+    /* コピーライト */
+    .Copyright{
+    padding: 16px 0;
+    border-top: 1px solid #222;
+    text-align: center;
+    }
+}

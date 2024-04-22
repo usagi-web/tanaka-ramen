@@ -1,0 +1,100 @@
+@charset "utf-8";
+
+/* メインビジュアル */
+.mv {
+    background-image: url(../images/menu-mv.jpg);
+    background-image: image-set(url(../images/menu-mv.jpg) 1x url(../images/menu-mv@2x.jpg) 2x);
+    background-image: -webkit-image-set(url(../images/menu-mv.jpg) 1x url(../images/menu-mv@2x.jpg) 2x);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 580px;
+    width: 100%;
+    position: relative;
+}
+.mv-text {
+    font-size: 56px;
+    font-weight: bold;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* インナー */
+.inner {
+    max-width: 800px;
+    margin: 0 auto;
+}
+/* メニュータイトル */
+.menu-title {
+    font-size: 56px;
+    font-weight: bold;
+    text-align: center;
+    padding: 80px 0 40px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+}
+.menu-title::before, .menu-title::after {
+    border-top: 2px solid #222;
+    content: "";
+    width: 1em;
+}
+.menu-title::before {
+    margin-right: 1em;
+}
+.menu-title::after {
+    margin-left: 1em;
+}
+/* ラーメンメニュー */
+.flexbox {
+    display: flex;
+    align-items: center;
+} 
+.figure img {
+    width: 50%;
+}
+.menu-name {
+    width: 50%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 2%;
+}
+.text {
+    font-size: 32px;
+    font-weight: bold;
+    
+}
+
+/* スマホ */
+@media (max-width: 400px){
+    /* メインビジュアル */
+    .mv{
+        height: 480px;
+    }
+    .mv-text {
+        font-size: 32px;
+    }
+    /* インナー */
+    .inner {
+        max-width: 380px;
+        padding: 0 2.5%;
+    }
+    /* メニュータイトル */
+    .menu-title {
+        font-size: 32px;
+        padding: 48px 0 40px 0;
+    }
+    /* ラーメンメニュー */
+    .flexbox {
+        flex-direction: column;
+    }
+    .text {
+        font-size: 24px;
+    }
+}
